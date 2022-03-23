@@ -25,11 +25,7 @@
 }
 
 .error__display {
-  color: red;
-}
-
-.matched__display {
-  color: green;
+  color: #ff0000;
 }
 
 .login__title {
