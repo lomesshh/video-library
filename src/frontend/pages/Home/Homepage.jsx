@@ -6,7 +6,7 @@ const Homepage = () => {
     <div>
       <div className="hero-section">
         <div className="hero-info">
-          <h1>Who are we ?</h1>
+          <h1>Gripping Gears</h1>
           <p>
             We're a team of fun enthusiastic people from all over the world. we
             create awesome videos on modern premium cars. The team is young, the
