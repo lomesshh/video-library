@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/authcontext";
 
 const Nav = () => {
+  const { token, handleLogout } = useAuth();
+
   return (
     <nav className="nav-bar">
       <Link to="/">
@@ -16,15 +19,24 @@ const Nav = () => {
           <i className="fas fa-bars"></i>
         </div>
         <ul>
-          <li>
-            <Link to="/login">
-              <button>
-                <i className="fa-solid fa-arrow-right-to-bracket"> </i> Login
+          {!token && (
+            <li>
+              <Link to="/login">
+                <button>
+                  <i className="fa-solid fa-arrow-right-to-bracket"> </i> Login
+                </button>
+              </Link>
+            </li>
+          )}
+          {token && (
+            <li>
+              <button onClick={handleLogout}>
+                <i className="fa-solid fa-door-open"></i> Logout
               </button>
-            </Link>
-          </li>
+            </li>
+          )}
           <li>
-            <Link to="/profile">
+            <Link to={`${token ? `/profile` : `/login`}`}>
               <p>
                 <i className="far fa-user"></i>Profile
               </p>

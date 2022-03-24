@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/authcontext";
 
 const initialValues = {
   name: "",
@@ -40,8 +41,10 @@ const validate = (values) => {
 };
 
 const Signup = () => {
+  const { handleSingup } = useAuth();
+
   const onSubmit = (values) => {
-    console.log(values);
+    handleSingup(values);
   };
 
   const formik = useFormik({
