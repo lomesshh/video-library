@@ -32,7 +32,6 @@ const AuthProvider = ({ children }) => {
   const handleLogin = async (values) => {
     try {
       const res = await axios.post("/api/auth/login", values);
-      console.log(res.data);
       if (res.status === 200 || res.status === 201) {
         localStorage.setItem("videoUser", JSON.stringify(res.data.foundUser));
         localStorage.setItem("videoToken", res.data.encodedToken);

@@ -13,7 +13,7 @@ const Homepage = () => {
             ideas are big and our drive is what makes us awesome.
           </p>
           <div className="hero-button">
-            <Link to="/videos">
+            <Link to="/videos/explore">
               <button>Explore videos</button>
             </Link>
           </div>
