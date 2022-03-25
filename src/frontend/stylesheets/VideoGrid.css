@@ -1,8 +1,35 @@
 .video__main {
-  /* border: 1px solid red; */
   display: flex;
   width: 85%;
   margin: auto;
+  min-height: 85vh;
+}
+
+.video__grid {
+  width: 100%;
+  position: relative;
+}
+
+.video__search {
+  padding: 1rem 1rem;
+  width: 105%;
+  position: sticky;
+  top: 0;
+  right: 50%;
+  z-index: 4;
+  background-color: var(--background-color);
+  box-shadow: inset 5px 0 5px -5px rgba(109, 108, 108, 0.7);
+}
+
+.video__search input {
+  width: 95%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  outline: none;
+  font-size: 1rem;
 }
 
 .video__sidebar {
@@ -13,6 +40,8 @@
   position: sticky;
   top: 0;
   align-self: flex-start;
+  height: 100vh;
+  box-shadow: 5px 0 5px -5px rgba(63, 63, 63, 0.7);
 }
 
 .activetab {
@@ -43,23 +72,29 @@
 }
 
 .video__list {
-  width: 85%;
-  box-shadow: inset 5px 0 5px -5px rgba(109, 108, 108, 0.7);
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
   justify-items: center;
-  row-gap: 1rem;
-  margin: 0 auto;
-  /* margin-bottom: 2rem; */
+  align-items: center;
+  margin-bottom: 0.3rem;
+  box-shadow: inset 5px 0 5px -5px rgba(109, 108, 108, 0.7);
 }
 
 .video__card {
-  height: 220px;
-  width: 230px;
+  height: 250px;
+  width: 300px;
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 0.25em,
+    rgba(255, 255, 255, 0.05) 0px 0.25em 1em;
+}
+
+.video__info {
+  margin-left: 0.3rem;
 }
 
 .video__img {
-  height: 140px;
+  height: 170px;
   width: 100%;
   margin-bottom: 0.3rem;
 }
@@ -77,5 +112,17 @@
 
 .info__one i {
   margin: 0rem 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.empty__list {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.liked__video {
+  color: var(--icon-color);
 }
