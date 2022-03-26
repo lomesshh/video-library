@@ -4,17 +4,10 @@ import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { useLike } from "../../context/likecontext";
 import { useWatchLater } from "../../context/watchlatercontext";
 
-const VideoCard = ({ item }) => {
-  const { addToLikes, likestate } = useLike();
-  const { addToWatchLater, watchlaterstate } = useWatchLater();
-
-  const findItemInLike = likestate.likes.find((prod) => prod._id === item._id);
-  const findItemInWatchLater = watchlaterstate.watchLater.find(
-    (prod) => prod._id === item._id
-  );
+const WatchLaterCard = ({ item }) => {
+  const { addToWatchLater } = useWatchLater();
 
   return (
     <div className="video__card">
@@ -37,30 +30,13 @@ const VideoCard = ({ item }) => {
         </Link>
         <div className="info__one">
           <Tippy
-            content={`${findItemInLike ? `Unlike` : `Like`}`}
+            content="Remove from watch later"
             theme="light"
             followCursor={true}
             plugins={[followCursor]}
           >
             <i
-              class={`fa-solid fa-thumbs-up ${
-                findItemInLike ? `liked__video` : ``
-              } `}
-              onClick={() => addToLikes(item)}
-            ></i>
-          </Tippy>
-          <Tippy
-            content={`${
-              findItemInWatchLater ? `Remove from watch later` : `Watch later`
-            }`}
-            theme="light"
-            followCursor={true}
-            plugins={[followCursor]}
-          >
-            <i
-              class={`fa-solid fa-floppy-disk ${
-                findItemInWatchLater ? `liked__video` : ``
-              }`}
+              class="fa-solid fa-trash-can"
               onClick={() => addToWatchLater(item)}
             ></i>
           </Tippy>
@@ -70,4 +46,4 @@ const VideoCard = ({ item }) => {
   );
 };
 
-export default VideoCard;
+export default WatchLaterCard;

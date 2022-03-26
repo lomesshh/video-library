@@ -25,3 +25,7 @@ body {
   padding: 0;
   color: var(--text-color);
 }
+
+i {
+  color: var(--primary-color);
+}
