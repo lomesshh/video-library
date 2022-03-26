@@ -15,6 +15,44 @@
 
 .singlevideo__action {
   margin-top: 1rem;
+  display: flex;
+}
+
+.playlist__main {
+  position: relative;
+}
+
+.playlist__view {
+  position: absolute;
+  bottom: 105%;
+  left: 70%;
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.playlist__view p {
+  padding: 0.3rem 0rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.playlist__view p:hover {
+  background-color: rgb(111, 62, 175);
+  border-radius: 5px;
+}
+
+.playlist__view p i {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.empty__playlist {
+  padding: 0.5rem;
 }
 
 .singlevideo__action i {
