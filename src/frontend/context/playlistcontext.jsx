@@ -28,8 +28,6 @@ const PlaylistProvider = ({ children }) => {
 
   const [playliststate, playlistdispatch] = useReducer(reducer, initialValue);
 
-  console.log("ALl", playliststate.playlist);
-
   const getAllPlaylist = async () => {
     playlistdispatch({ type: "API_REQUEST" });
     try {
