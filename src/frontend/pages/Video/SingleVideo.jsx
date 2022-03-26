@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Iframe from "react-iframe-click";
 import { useParams } from "react-router-dom";
 import { useData } from "../../context/datacontext";
 import Tippy from "@tippyjs/react";
@@ -9,6 +10,8 @@ import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import { useLike } from "../../context/likecontext";
 import { usePlaylist } from "../../context/playlistcontext";
+import { useHistory } from "../../context/historycontext";
+import { useWatchLater } from "../../context/watchlatercontext";
 
 const SingleVideo = () => {
   const { allVideos } = useData();
@@ -18,18 +21,24 @@ const SingleVideo = () => {
   const [visible, setVisible] = useState(false);
   const [title, setTitle] = useState("");
   const [open, setOpen] = useState(false);
+  const { watchlaterstate, addToWatchLater } = useWatchLater();
+  const { addToHistory } = useHistory();
 
   const findItem = allVideos.find((item) => item._id === videoId);
   const findItemInLike = likestate.likes.find((prod) => prod._id === videoId);
+  const findItemInWatchlater = watchlaterstate.watchLater.find(
+    (prod) => prod._id === videoId
+  );
 
   return (
     <div className="singlevideo__main">
       <div className="singlevideo__display">
         <div className="singlevideo__iframe">
-          <iframe
-            frameborder="0"
+          <Iframe
+            frameBorder="0"
             src={`https://www.youtube.com/embed/${findItem._id}`}
-          ></iframe>
+            onInferredClick={() => addToHistory(findItem)}
+          ></Iframe>
         </div>
         <div className="singlevideo__info">
           <h3>{findItem.title}</h3>
@@ -87,12 +96,19 @@ const SingleVideo = () => {
             {/*<i class="fa-solid fa-check"></i>*/}
           </div>
           <Tippy
-            content="Watch later"
+            content={`${
+              findItemInWatchlater ? `Remove from watch later` : `Watch later`
+            }`}
             theme="light"
             followCursor={true}
             plugins={[followCursor]}
           >
-            <i class="fa-solid fa-floppy-disk"></i>
+            <i
+              class={`fa-solid fa-floppy-disk ${
+                findItemInWatchlater ? `liked__video` : ``
+              }`}
+              onClick={() => addToWatchLater(findItem)}
+            ></i>
           </Tippy>
         </div>
         <Modal open={open} onClose={() => setOpen(!open)} center>
