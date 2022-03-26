@@ -11,6 +11,7 @@ import WatchLater from "./../pages/WatchLater/WatchLater";
 import History from "./../pages/History/History";
 import Explore from "./../pages/Video/Explore";
 import SingleVideo from "./../pages/Video/SingleVideo";
+import SinglePlaylist from "../pages/Playlist/SinglePlaylist";
 
 const Routelist = () => {
   return (
@@ -24,6 +25,11 @@ const Routelist = () => {
         <Route path="/videos" exact element={<VideoGrid />}>
           <Route path="explore" exact element={<Explore />} />
           <Route path="playlist" exact element={<Playlist />} />
+          <Route
+            path="playlist/:playlistId"
+            exact
+            element={<SinglePlaylist />}
+          />
           <Route path="liked" exact element={<LikedVideo />} />
           <Route path="watchlater" exact element={<WatchLater />} />
           <Route path="history" exact element={<History />} />
