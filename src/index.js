@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./frontend/context/authcontext";
 import { DataProvider } from "./frontend/context/datacontext";
 import { LikeProvider } from "./frontend/context/likecontext";
+import { HistoryProvider } from "./frontend/context/historycontext";
+import { WatchLaterProvider } from "./frontend/context/watchlatercontext";
 
 makeServer();
 
@@ -14,11 +16,15 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <LikeProvider>
-          <DataProvider>
-            <App />
-          </DataProvider>
-        </LikeProvider>
+        <WatchLaterProvider>
+          <HistoryProvider>
+            <LikeProvider>
+              <DataProvider>
+                <App />
+              </DataProvider>
+            </LikeProvider>
+          </HistoryProvider>
+        </WatchLaterProvider>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,

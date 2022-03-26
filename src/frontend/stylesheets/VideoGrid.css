@@ -126,3 +126,23 @@
 .liked__video {
   color: var(--icon-color);
 }
+
+.watched__video {
+  display: flex;
+  justify-content: space-between;
+}
+
+.watched__video button {
+  padding: 0.2rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.watched__video button:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
