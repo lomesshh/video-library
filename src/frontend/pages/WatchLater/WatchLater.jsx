@@ -13,7 +13,7 @@ const WatchLater = () => {
       </div>
       {watchlaterstate.loading && <Loader />}
       {watchlaterstate.watchLater < 1 && !watchlaterstate.loading && (
-        <h3 className="empty__list">You havn't saved any video yet !</h3>
+        <h3 className="empty__list">You haven't saved any video yet !</h3>
       )}
       <div className="video__list">
         {watchlaterstate.watchLater.map((item) => (

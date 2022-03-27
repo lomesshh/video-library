@@ -22,17 +22,17 @@ const Nav = () => {
           {!token && (
             <li>
               <Link to="/login">
-                <button>
+                <p>
                   <i className="fa-solid fa-arrow-right-to-bracket"> </i> Login
-                </button>
+                </p>
               </Link>
             </li>
           )}
           {token && (
             <li>
-              <button onClick={handleLogout}>
+              <p className="auth__button" onClick={handleLogout}>
                 <i className="fa-solid fa-door-open"></i> Logout
-              </button>
+              </p>
             </li>
           )}
           <li>

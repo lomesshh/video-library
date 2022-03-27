@@ -41,7 +41,7 @@ const Login = () => {
           <p htmlFor="email">Email</p>
           <input
             type="email"
-            placeholder="Enter email"
+            placeholder="test : test@gmail.com"
             name="email"
             onChange={formik.handleChange}
             value={formik.values.email}
@@ -54,7 +54,7 @@ const Login = () => {
           <p htmlFor="password">Password</p>
           <input
             type="password"
-            placeholder="Enter password"
+            placeholder="test : test123"
             name="password"
             onChange={formik.handleChange}
             value={formik.values.password}

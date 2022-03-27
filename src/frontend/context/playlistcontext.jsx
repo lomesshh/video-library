@@ -42,7 +42,6 @@ const PlaylistProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
-      Notify("Server error, Please try again later !", "error");
     }
   };
 

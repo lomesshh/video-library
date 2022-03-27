@@ -14,7 +14,7 @@ const LikedVideo = () => {
       </div>
       {historystate.loading && <Loader />}
       {historystate.history.length < 1 && !historystate.loading && (
-        <h3 className="empty__list">You havn't watched any video yet !</h3>
+        <h3 className="empty__list">You haven't watched any video yet !</h3>
       )}
       <div className="video__list">
         {historystate.history.map((item) => (

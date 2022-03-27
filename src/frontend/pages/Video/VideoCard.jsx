@@ -1,15 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
 import { useLike } from "../../context/likecontext";
 import { useWatchLater } from "../../context/watchlatercontext";
+import { useAuth } from "../../context/authcontext";
 
 const VideoCard = ({ item }) => {
   const { addToLikes, likestate } = useLike();
   const { addToWatchLater, watchlaterstate } = useWatchLater();
+  const navigate = useNavigate();
+  const { token } = useAuth();
 
   const findItemInLike = likestate.likes.find((prod) => prod._id === item._id);
   const findItemInWatchLater = watchlaterstate.watchLater.find(
@@ -18,7 +21,7 @@ const VideoCard = ({ item }) => {
 
   return (
     <div className="video__card">
-      <Link to={`/videos/${item._id}`}>
+      <Link to={`${token ? `/videos/${item._id}` : `/login`}`}>
         <div className="video__img">
           <img
             src={`https://i.ytimg.com/vi/${item._id}/maxresdefault.jpg`}
@@ -27,7 +30,7 @@ const VideoCard = ({ item }) => {
         </div>
       </Link>
       <div className="video__info">
-        <Link to={`/videos/${item._id}`}>
+        <Link to={`${token ? `/videos/${item._id}` : `/login`}`}>
           <h5>
             {item.title.length < 25
               ? item.title
@@ -46,7 +49,7 @@ const VideoCard = ({ item }) => {
               class={`fa-solid fa-thumbs-up ${
                 findItemInLike ? `liked__video` : ``
               } `}
-              onClick={() => addToLikes(item)}
+              onClick={() => (token ? addToLikes(item) : navigate("/login"))}
             ></i>
           </Tippy>
           <Tippy
@@ -61,7 +64,9 @@ const VideoCard = ({ item }) => {
               class={`fa-solid fa-floppy-disk ${
                 findItemInWatchLater ? `liked__video` : ``
               }`}
-              onClick={() => addToWatchLater(item)}
+              onClick={() =>
+                token ? addToWatchLater(item) : navigate("/login")
+              }
             ></i>
           </Tippy>
         </div>

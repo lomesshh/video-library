@@ -12,7 +12,7 @@ const Playlist = () => {
 
   return (
     <div className="video__grid">
-      <div className="video__search">
+      <div className="video__search watched__video">
         <h3>All Playlists ( {playliststate.playlist.length} Playlists )</h3>
         <button
           onClick={() => {
@@ -20,7 +20,7 @@ const Playlist = () => {
             setOpen(!open);
           }}
         >
-          Open modal
+          Add Playlist
         </button>
         <Modal open={open} onClose={() => setOpen(!open)} center>
           <p>Add Playlist</p>
