@@ -65,7 +65,6 @@ const HistoryProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
-      Notify("Server Error, Please try again later", "error");
     }
   };
 
