@@ -43,7 +43,6 @@ const HistoryProvider = ({ children }) => {
         payload: response.data.history,
       });
     } catch (error) {
-      console.log(error);
       historydispatch({ type: "HANDLE_ERROR" });
     }
   };

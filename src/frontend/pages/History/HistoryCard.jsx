@@ -36,7 +36,7 @@ const HistoryCard = ({ item }) => {
             plugins={[followCursor]}
           >
             <i
-              class="fa-solid fa-trash-can"
+              className="fa-solid fa-trash-can"
               onClick={() => removeFromHistory(item)}
             ></i>
           </Tippy>

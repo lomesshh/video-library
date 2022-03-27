@@ -55,7 +55,7 @@ const Playlist = () => {
               <h3>{item.title}</h3>
             </Link>
             <i
-              class="fa-solid fa-trash-can"
+              className="fa-solid fa-trash-can"
               onClick={() => deletePlaylist(item)}
             ></i>
           </div>

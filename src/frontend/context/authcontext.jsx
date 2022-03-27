@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem("videoToken", res.data.encodedToken);
         setLocalToken(res.data.encodedToken);
         setLocalUser(res.data.foundUser);
-        navigate("/profile");
+        navigate("/videos/explore");
         Notify("Login succeesful", "info");
       } else {
         Notify("Unable to login, please try again later", "error");

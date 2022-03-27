@@ -40,7 +40,6 @@ const LikeProvider = ({ children }) => {
       });
       likedispatch({ type: "ADD_TO_LIKES", payload: response.data.likes });
     } catch (error) {
-      console.log(error);
       likedispatch({ type: "ERROR_HANDLE" });
     }
   };

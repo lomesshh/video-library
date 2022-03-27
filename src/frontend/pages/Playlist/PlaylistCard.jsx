@@ -36,7 +36,7 @@ const PlaylistCard = ({ item, playlist }) => {
             plugins={[followCursor]}
           >
             <i
-              class="fa-solid fa-trash-can"
+              className="fa-solid fa-trash-can"
               onClick={() => addVideoToPlaylist(item, playlist)}
             ></i>
           </Tippy>

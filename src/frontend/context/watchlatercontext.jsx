@@ -44,7 +44,6 @@ const WatchLaterProvider = ({ children }) => {
         payload: response.data.watchLater,
       });
     } catch (error) {
-      console.log(error);
       watchlaterdispatch({ type: "HANDLE_ERROR" });
     }
   };

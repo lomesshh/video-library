@@ -36,7 +36,7 @@ const LikeCard = ({ item }) => {
             plugins={[followCursor]}
           >
             <i
-              class="fa-solid fa-trash-can"
+              className="fa-solid fa-trash-can"
               onClick={() => addToLikes(item)}
             ></i>
           </Tippy>

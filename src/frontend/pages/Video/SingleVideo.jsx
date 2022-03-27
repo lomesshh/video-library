@@ -54,7 +54,7 @@ const SingleVideo = () => {
             plugins={[followCursor]}
           >
             <i
-              class={`fa-solid fa-thumbs-up ${
+              className={`fa-solid fa-thumbs-up ${
                 findItemInLike ? `liked__video` : ``
               }`}
               onClick={() => addToLikes(findItem)}
@@ -68,7 +68,7 @@ const SingleVideo = () => {
               plugins={[followCursor]}
             >
               <i
-                class="fa-solid fa-folder-plus"
+                className="fa-solid fa-folder-plus"
                 onClick={() => setVisible(!visible)}
               ></i>
             </Tippy>
@@ -85,9 +85,9 @@ const SingleVideo = () => {
                   return (
                     <p onClick={() => addVideoToPlaylist(findItem, item)}>
                       {findVideo ? (
-                        <i class="fa-solid fa-check"></i>
+                        <i className="fa-solid fa-check"></i>
                       ) : (
-                        <i class="fa-solid fa-plus"></i>
+                        <i className="fa-solid fa-plus"></i>
                       )}
                       {item.title}
                     </p>
@@ -101,12 +101,12 @@ const SingleVideo = () => {
                     setOpen(!open);
                   }}
                 >
-                  <i class="fa-solid fa-circle-plus"></i>
+                  <i className="fa-solid fa-circle-plus"></i>
                   Add playlist
                 </p>
               </div>
             )}
-            {/*<i class="fa-solid fa-check"></i>*/}
+            {/*<i className="fa-solid fa-check"></i>*/}
           </div>
           <Tippy
             content={`${
@@ -117,7 +117,7 @@ const SingleVideo = () => {
             plugins={[followCursor]}
           >
             <i
-              class={`fa-solid fa-floppy-disk ${
+              className={`fa-solid fa-floppy-disk ${
                 findItemInWatchlater ? `liked__video` : ``
               }`}
               onClick={() => addToWatchLater(findItem)}

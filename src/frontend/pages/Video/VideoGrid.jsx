@@ -14,13 +14,13 @@ const VideoGrid = () => {
       <div className="video__sidebar">
         <NavLink className={navLinkStyle} to="/">
           <p className="sidebar__option">
-            <i class="fa-solid fa-house"></i>
+            <i className="fa-solid fa-house"></i>
             <p>Home</p>
           </p>
         </NavLink>
         <NavLink className={navLinkStyle} to="explore">
           <p className="sidebar__option">
-            <i class="fa-solid fa-video"></i> <p> Explore</p>
+            <i className="fa-solid fa-video"></i> <p> Explore</p>
           </p>
         </NavLink>
         <NavLink
@@ -28,12 +28,12 @@ const VideoGrid = () => {
           to={`${token ? `playlist` : `/login`}`}
         >
           <p className="sidebar__option">
-            <i class="fa-solid fa-folder-plus"></i> <p>Playlist</p>
+            <i className="fa-solid fa-folder-plus"></i> <p>Playlist</p>
           </p>
         </NavLink>
         <NavLink className={navLinkStyle} to={`${token ? `liked` : `/login`}`}>
           <p className="sidebar__option">
-            <i class="fa-solid fa-thumbs-up"></i> <p>Liked videos</p>
+            <i className="fa-solid fa-thumbs-up"></i> <p>Liked videos</p>
           </p>
         </NavLink>
         <NavLink
@@ -41,7 +41,7 @@ const VideoGrid = () => {
           to={`${token ? `watchlater` : `/login`}`}
         >
           <p className="sidebar__option">
-            <i class="fa-solid fa-floppy-disk"></i> <p>Watch later</p>
+            <i className="fa-solid fa-floppy-disk"></i> <p>Watch later</p>
           </p>
         </NavLink>
         <NavLink
@@ -49,7 +49,7 @@ const VideoGrid = () => {
           to={`${token ? `history` : `/login`}`}
         >
           <p className="sidebar__option">
-            <i class="fa-solid fa-clock"></i> <p>History</p>
+            <i className="fa-solid fa-clock"></i> <p>History</p>
           </p>
         </NavLink>
       </div>

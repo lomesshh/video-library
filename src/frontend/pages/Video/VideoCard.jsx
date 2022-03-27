@@ -46,7 +46,7 @@ const VideoCard = ({ item }) => {
             plugins={[followCursor]}
           >
             <i
-              class={`fa-solid fa-thumbs-up ${
+              className={`fa-solid fa-thumbs-up ${
                 findItemInLike ? `liked__video` : ``
               } `}
               onClick={() => (token ? addToLikes(item) : navigate("/login"))}
@@ -61,7 +61,7 @@ const VideoCard = ({ item }) => {
             plugins={[followCursor]}
           >
             <i
-              class={`fa-solid fa-floppy-disk ${
+              className={`fa-solid fa-floppy-disk ${
                 findItemInWatchLater ? `liked__video` : ``
               }`}
               onClick={() =>

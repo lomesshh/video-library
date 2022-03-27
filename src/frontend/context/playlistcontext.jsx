@@ -39,7 +39,6 @@ const PlaylistProvider = ({ children }) => {
         payload: response.data.playlists,
       });
     } catch (error) {
-      console.log(error);
       playlistdispatch({ type: "HANDLE_ERROR" });
     }
   };
