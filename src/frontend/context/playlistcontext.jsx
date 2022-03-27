@@ -34,14 +34,13 @@ const PlaylistProvider = ({ children }) => {
       const response = await axios.get("/api/user/playlists", {
         headers: { authorization: token },
       });
-      if (response.status === 200 || response.status === 201) {
-        playlistdispatch({
-          type: "ADD_TO_PLAYLIST",
-          payload: response.data.playlists,
-        });
-      }
+      playlistdispatch({
+        type: "ADD_TO_PLAYLIST",
+        payload: response.data.playlists,
+      });
     } catch (error) {
       console.log(error);
+      playlistdispatch({ type: "HANDLE_ERROR" });
     }
   };
 

@@ -39,14 +39,13 @@ const WatchLaterProvider = ({ children }) => {
       const response = await axios.get("/api/user/watchLater", {
         headers: { authorization: token },
       });
-      if (response.status === 200 || response.status === 201) {
-        watchlaterdispatch({
-          type: "ADD_TO_WATCHLATER",
-          payload: response.data.watchLater,
-        });
-      }
+      watchlaterdispatch({
+        type: "ADD_TO_WATCHLATER",
+        payload: response.data.watchLater,
+      });
     } catch (error) {
       console.log(error);
+      watchlaterdispatch({ type: "HANDLE_ERROR" });
     }
   };
 

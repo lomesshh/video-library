@@ -38,14 +38,13 @@ const HistoryProvider = ({ children }) => {
       const response = await axios.get("/api/user/history", {
         headers: { authorization: token },
       });
-      if (response.status === 200 || response.status === 201) {
-        historydispatch({
-          type: "ADD_TO_HISTORY",
-          payload: response.data.history,
-        });
-      }
+      historydispatch({
+        type: "ADD_TO_HISTORY",
+        payload: response.data.history,
+      });
     } catch (error) {
       console.log(error);
+      historydispatch({ type: "HANDLE_ERROR" });
     }
   };
 
