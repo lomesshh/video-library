@@ -7,17 +7,16 @@ const Nav = () => {
 
   return (
     <nav className="nav-bar">
-      <Link to="/">
-        <img
-          className="nav-logo"
-          src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/gripping_d4dmiq.png"
-          alt="nav-logo"
-        />
-      </Link>
+      <div>
+        <Link to="/">
+          <img
+            className="nav-logo"
+            src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/gripping_d4dmiq.png"
+            alt="nav-logo"
+          />
+        </Link>
+      </div>
       <div className="nav-option">
-        <div className="nav-short">
-          <i className="fas fa-bars"></i>
-        </div>
         <ul>
           {!token && (
             <li>

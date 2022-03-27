@@ -33,7 +33,7 @@
 }
 
 .video__sidebar {
-  width: 15%;
+  width: 215px;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -65,10 +65,15 @@
   cursor: pointer;
 }
 
-.video__sidebar i {
+.video__sidebar i,
+.video__sidebar p {
   color: var(--primary-color);
   margin-right: 0.5rem;
   font-size: 1.1rem;
+}
+
+.sidebar__option {
+  display: flex;
 }
 
 .video__list {
@@ -78,6 +83,7 @@
   gap: 1.5rem;
   justify-items: center;
   align-items: center;
+  padding-left: 1rem;
   margin-bottom: 0.3rem;
   box-shadow: inset 5px 0 5px -5px rgba(109, 108, 108, 0.7);
 }
@@ -145,4 +151,73 @@
 .watched__video button:hover {
   background-color: var(--secondary-color);
   color: var(--background-color);
+}
+
+@media screen and (max-width: 1350px) {
+  .video__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar__option p {
+    display: none;
+  }
+  .video__sidebar {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .video__main {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video__card {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .video__list {
+    grid-template-columns: 1fr;
+  }
+  .video__card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .video__main {
+    margin-top: 0.2rem;
+  }
+  .video__search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .video__search h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .video__card {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .video__card {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .video__search h3 {
+    font-size: 1rem;
+  }
 }

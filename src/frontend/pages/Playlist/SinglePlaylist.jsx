@@ -14,7 +14,7 @@ const SinglePlaylist = () => {
   return (
     <div className="video__grid">
       <div className="video__search">
-        <h3>Videos in this playlist ( {findPlaylist.videos.length} Videos )</h3>
+        <h3>Videos in playlist ( {findPlaylist.videos.length} Videos )</h3>
       </div>
       {findPlaylist.videos?.length < 1 && (
         <h3 className="empty__list">No videos found in this playlist !</h3>

@@ -26,7 +26,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="hero-section">
+      <div className="hero-section second__section">
         <div className="hero-image">
           <img
             src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648030113/gripping%20gears/hero_ddidwk.jpg"
@@ -44,7 +44,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="hero-section">
+      <div className="hero-section third__section">
         <div className="hero-info">
           <h1>Our Mission</h1>
           <p>

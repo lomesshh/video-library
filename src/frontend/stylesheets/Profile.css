@@ -161,6 +161,7 @@
   .profile__image {
     margin: auto;
     margin-top: 1rem;
+    margin-bottom: 0;
   }
   .image__outer {
     width: 60%;
