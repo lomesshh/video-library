@@ -75,11 +75,24 @@ const SingleVideo = () => {
 
             {visible && (
               <div className="playlist__view">
-                {playliststate.playlist.map((item) => (
-                  <p onClick={() => addVideoToPlaylist(findItem, item)}>
-                    <i class="fa-solid fa-plus"></i> {item.title}
-                  </p>
-                ))}
+                {playliststate.playlist.map((item) => {
+                  const findPlaylist = playliststate.playlist.find(
+                    (play) => play._id === item._id
+                  );
+                  const findVideo = findPlaylist.videos?.find(
+                    (prod) => prod._id === findItem._id
+                  );
+                  return (
+                    <p onClick={() => addVideoToPlaylist(findItem, item)}>
+                      {findVideo ? (
+                        <i class="fa-solid fa-check"></i>
+                      ) : (
+                        <i class="fa-solid fa-plus"></i>
+                      )}
+                      {item.title}
+                    </p>
+                  );
+                })}
 
                 <p
                   className="empty__playlist"
