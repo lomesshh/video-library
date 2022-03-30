@@ -17,7 +17,7 @@ const Profile = () => {
             Logout <i className="fa-solid fa-door-open"></i>
           </button>
           <button className="small__screen-button">
-            <i className="fa-solid fa-door-open"></i>
+            <i className="fa-solid fa-door-open" onClick={handleLogout}></i>
           </button>
         </div>
         <div className="profile__about">
