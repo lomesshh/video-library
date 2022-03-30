@@ -8,6 +8,9 @@ import { useLike } from "../../context/likecontext";
 import { useWatchLater } from "../../context/watchlatercontext";
 import { useAuth } from "../../context/authcontext";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const VideoCard = ({ item }) => {
   const { addToLikes, likestate } = useLike();
   const { addToWatchLater, watchlaterstate } = useWatchLater();
@@ -23,9 +26,10 @@ const VideoCard = ({ item }) => {
     <div className="video__card">
       <Link to={`${token ? `/videos/${item._id}` : `/login`}`}>
         <div className="video__img">
-          <img
+          <LazyLoadImage
             src={`https://i.ytimg.com/vi/${item._id}/maxresdefault.jpg`}
             alt="thumbnail_img"
+            effect="blur"
           />
         </div>
       </Link>
