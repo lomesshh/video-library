@@ -5,6 +5,7 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [allVideos, setAllVideos] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -18,11 +19,22 @@ const DataProvider = ({ children }) => {
         console.log(error);
       }
     })();
+
+    (async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get("/api/categories");
+        setAllCategories(response.data.categories);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   return (
     <div>
-      <DataContext.Provider value={{ allVideos, loading }}>
+      <DataContext.Provider value={{ allVideos, loading, allCategories }}>
         {children}
       </DataContext.Provider>
     </div>

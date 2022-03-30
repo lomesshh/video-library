@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authcontext";
 
 const Login = () => {
   const { handleLogin } = useAuth();
+
+  const [type, setType] = useState("password");
+  const [icon, setIcon] = useState("fa-solid fa-eye-slash");
+
+  const show = () => {
+    type === "password" ? setType("text") : setType("password");
+    icon === "fa-solid fa-eye"
+      ? setIcon("fa-solid fa-eye-slash")
+      : setIcon("fa-solid fa-eye");
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -41,7 +51,7 @@ const Login = () => {
           <p htmlFor="email">Email</p>
           <input
             type="email"
-            placeholder="test : test@gmail.com"
+            placeholder="Enter email"
             name="email"
             onChange={formik.handleChange}
             value={formik.values.email}
@@ -53,18 +63,30 @@ const Login = () => {
           ) : null}
           <p htmlFor="password">Password</p>
           <input
-            type="password"
-            placeholder="test : test123"
+            type={type}
+            placeholder="Enter password"
             name="password"
             onChange={formik.handleChange}
             value={formik.values.password}
             onBlur={formik.handleBlur}
           />
+          <i onClick={show} className={icon}></i>
           <br />
           {formik.touched.password && formik.errors.password ? (
             <span className="error__display">{formik.errors.password}</span>
           ) : null}
         </div>
+        <button
+          className="login__button"
+          type="submit"
+          onClick={() => {
+            formik.values.email = "test@gmail.com";
+            formik.values.password = "test123";
+            formik.handleSubmit;
+          }}
+        >
+          Test credentials
+        </button>
         <button className="login__button" type="submit">
           Log in
         </button>

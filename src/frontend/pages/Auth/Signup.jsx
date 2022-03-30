@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authcontext";
 
@@ -42,6 +42,16 @@ const validate = (values) => {
 
 const Signup = () => {
   const { handleSingup } = useAuth();
+
+  const [type, setType] = useState("password");
+  const [icon, setIcon] = useState("fa-solid fa-eye-slash");
+
+  const show = () => {
+    type === "password" ? setType("text") : setType("password");
+    icon === "fa-solid fa-eye"
+      ? setIcon("fa-solid fa-eye-slash")
+      : setIcon("fa-solid fa-eye");
+  };
 
   const onSubmit = (values) => {
     handleSingup(values);
@@ -88,13 +98,15 @@ const Signup = () => {
 
           <p htmlFor="password">Password</p>
           <input
-            type="password"
+            type={type}
             placeholder="Enter password"
             name="password"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.password}
           />
+          <i onClick={show} className={icon}></i>
+
           <br />
           {formik.touched.password && formik.errors.password ? (
             <span className="error__display">{formik.errors.password}</span>

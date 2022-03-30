@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
         setLocalUser(res.data.foundUser);
         navigate("/videos/explore");
         Notify("Login succeesful", "info");
-      }
+      } 
     } catch (error) {
       console.log(error);
       Notify("Unable to login, please try again later", "error");

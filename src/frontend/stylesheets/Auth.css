@@ -71,6 +71,10 @@
   padding: 1rem 3rem;
 }
 
+i {
+  cursor: pointer;
+}
+
 .signup .login__title {
   margin-bottom: 1%;
 }
