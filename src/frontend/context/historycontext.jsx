@@ -65,6 +65,7 @@ const HistoryProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+      historydispatch({ type: "HANDLE_ERROR" });
     }
   };
 
@@ -84,6 +85,7 @@ const HistoryProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
       Notify("Server Error, Please try again later", "error");
+      historydispatch({ type: "HANDLE_ERROR" });
     }
   };
 
@@ -103,6 +105,7 @@ const HistoryProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
       Notify("Server Error, Please try again later", "error");
+      historydispatch({ type: "HANDLE_ERROR" });
     }
   };
 

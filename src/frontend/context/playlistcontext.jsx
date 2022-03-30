@@ -63,6 +63,7 @@ const PlaylistProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+      playlistdispatch({ type: "HANDLE_ERROR" });
       Notify("Server error, Please try again later !", "error");
     }
   };
@@ -81,6 +82,7 @@ const PlaylistProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+      playlistdispatch({ type: "HANDLE_ERROR" });
       Notify("Server error, Please try again later !", "error");
     }
   };
@@ -117,6 +119,7 @@ const PlaylistProvider = ({ children }) => {
         }
       } catch (error) {
         console.log(error);
+        playlistdispatch({ type: "HANDLE_ERROR" });
         Notify("Server error, please try again later", "info");
       }
     } else {

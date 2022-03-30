@@ -66,6 +66,7 @@ const LikeProvider = ({ children }) => {
         }
       } catch (error) {
         console.log(error);
+        likedispatch({ type: "ERROR_HANDLE" });
         Notify("Server error, please try again later", "info");
       }
     } else {
@@ -81,6 +82,7 @@ const LikeProvider = ({ children }) => {
         }
       } catch (error) {
         console.log(error);
+        likedispatch({ type: "ERROR_HANDLE" });
         Notify("Server error, please try again later", "info");
       }
     }

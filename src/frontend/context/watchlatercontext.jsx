@@ -71,6 +71,7 @@ const WatchLaterProvider = ({ children }) => {
         }
       } catch (error) {
         console.log(error);
+        watchlaterdispatch({ type: "HANDLE_ERROR" });
         Notify("Server error, please try again later", "info");
       }
     } else {
@@ -87,6 +88,7 @@ const WatchLaterProvider = ({ children }) => {
         }
       } catch (error) {
         console.log(error);
+        watchlaterdispatch({ type: "HANDLE_ERROR" });
         Notify("Server error, please try again later", "info");
       }
     }
@@ -107,6 +109,7 @@ const WatchLaterProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+      watchlaterdispatch({ type: "HANDLE_ERROR" });
       Notify("Server Error, Please try again later", "error");
     }
   };
