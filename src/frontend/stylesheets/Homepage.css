@@ -80,6 +80,17 @@ a {
   box-shadow: 0px -2px 5px -1px rgba(124, 124, 124, 0.5);
 }
 
+.visitor__count {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.visitor__count img {
+  position: absolute;
+  margin-left: 0.3rem;
+  bottom: 0;
+}
+
 .footer__flex {
   display: flex;
   width: 100%;
@@ -173,10 +184,16 @@ a {
     flex-direction: column;
     text-align: center;
   }
-
   .about-cards .grid {
     display: flex;
     flex-wrap: wrap;
+  }
+  .visitor__count {
+    margin-left: -7rem;
+    margin-top: 1rem;
+  }
+  .visitor__count img {
+    top: -0.3rem;
   }
 }
 
