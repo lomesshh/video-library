@@ -32,7 +32,7 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
    - Likes Management
    - Watch Later Management
    - Playlist Management
-   - History management ( save vidoe only if you play )
+   - History management ( will save video only if you play )
    - Login / Logout
    - Signup
    - User Profile page
