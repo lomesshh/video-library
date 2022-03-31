@@ -27,31 +27,28 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
 
 ## Screens ( All screens are responsive )
    - Homepage
-   - Product Listing Page with Filters
-   - Single Product Page
-   - Cart Management
-   - Wishlist Management
-   - Address management
+   - Video Listing Page with Category Filters
+   - Single Video Page
+   - Likes Management
+   - Watch Later Management
+   - Playlist Management
+   - History management ( save vidoe only if you play )
    - Login / Logout
    - Signup
    - User Profile page
-   - Checkout
-   - Order summary
 
 
 ## 🚀 Features
 - Login/Signup User Account
-- Product Filters Based on Price, Category, Ratings | Sort By
-- Product Search
-- Products Pagination (Default 6 Products Per Page)
-- Wishlist Add/Remove Items
-- Cart Add/Remove Items | Update Quantities
-- Address management
-- Order summary
-- Coupons provided for discount
-- Razorpay payment gateway
-- My orders
-- Order details of all ordered item
+- Video Filter Based on Category
+- Video Search
+- Lazy load video card images ( load as you scroll )
+- Like management add/remove videos
+- Watchlater management add/remove videos | Clear All
+- History management add/remove videos | Clear All
+- Playlist management add/remove playlist | add/remove videos from playlist
+- Single video page with suggested videos
+- My profile
 
 
 ## Live
@@ -66,7 +63,7 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
     <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706211/gripping%20gears/Screenshot_38_x2axnk.png" alt="mockups" /></td>
   </tr>
   <tr>
-    <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706213/gripping%20gears/Screenshot_39_khje07.pngg" alt="mockup" /></td>
+    <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706213/gripping%20gears/Screenshot_39_khje07.png" alt="mockup" /></td>
     <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706208/gripping%20gears/Screenshot_40_myamp4.png" alt="mockups" /></td>
   </tr>
   <tr>
