@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { useAuth } from "../../context/authcontext";
+import { useAuth } from "frontend/context";
 
 const navLinkStyle = ({ isActive }) => {
   return isActive ? `activetab` : `notactive`;
@@ -59,4 +59,4 @@ const VideoGrid = () => {
   );
 };
 
-export default VideoGrid;
+export { VideoGrid };

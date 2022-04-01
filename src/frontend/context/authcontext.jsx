@@ -1,7 +1,7 @@
 import axios from "axios";
+import { Notify } from "frontend/components";
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Notify } from "../components/Toast";
 
 const AuthContext = createContext();
 
@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
         setLocalUser(res.data.foundUser);
         navigate("/videos/explore");
         Notify("Login succeesful", "info");
-      } 
+      }
     } catch (error) {
       console.log(error);
       Notify("Unable to login, please try again later", "error");

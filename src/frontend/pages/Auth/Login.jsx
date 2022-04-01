@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/authcontext";
+import { useAuth } from "frontend/context";
 
 const Login = () => {
   const { handleLogin } = useAuth();
@@ -102,4 +102,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export { Login };

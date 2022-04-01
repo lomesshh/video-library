@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useWatchLater } from "frontend/context";
+
+//library imports
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { useWatchLater } from "../../context/watchlatercontext";
 
 const WatchLaterCard = ({ item }) => {
   const { addToWatchLater } = useWatchLater();
@@ -46,4 +48,4 @@ const WatchLaterCard = ({ item }) => {
   );
 };
 
-export default WatchLaterCard;
+export { WatchLaterCard };

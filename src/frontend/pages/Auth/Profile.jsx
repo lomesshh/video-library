@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "../../context/authcontext";
+import { useAuth } from "frontend/context";
 
 const Profile = () => {
   const { user, handleLogout } = useAuth();
@@ -35,4 +35,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export { Profile };

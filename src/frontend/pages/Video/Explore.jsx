@@ -1,7 +1,7 @@
+import { Loader } from "frontend/components";
+import { useData } from "frontend/context";
 import React, { useState } from "react";
-import { useData } from "../../context/datacontext";
-import Loader from "./../../components/Loader";
-import VideoCard from "./VideoCard";
+import { VideoCard } from "frontend/pages";
 
 const Explore = () => {
   const { allVideos, loading, allCategories } = useData();
@@ -84,4 +84,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export { Explore };

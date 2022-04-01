@@ -1,7 +1,7 @@
+import { Loader } from "frontend/components";
 import React from "react";
-import { useLike } from "../../context/likecontext";
-import LikeCard from "./LikeCard";
-import Loader from "./../../components/Loader";
+import { useLike } from "frontend/context";
+import { LikeCard } from "frontend/pages";
 
 const LikedVideo = () => {
   const { likestate } = useLike();
@@ -23,4 +23,4 @@ const LikedVideo = () => {
   );
 };
 
-export default LikedVideo;
+export { LikedVideo };

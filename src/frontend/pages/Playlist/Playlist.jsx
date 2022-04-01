@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Loader from "../../components/Loader";
-import { usePlaylist } from "../../context/playlistcontext";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
+import { Loader } from "frontend/components";
+import { usePlaylist } from "frontend/context";
 
 const Playlist = () => {
   const [open, setOpen] = useState(false);
@@ -65,4 +65,4 @@ const Playlist = () => {
   );
 };
 
-export default Playlist;
+export { Playlist };
