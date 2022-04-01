@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "frontend/context";
+
+//library imports
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { useHistory } from "../../context/historycontext";
 
 const HistoryCard = ({ item }) => {
   const { removeFromHistory } = useHistory();
@@ -46,4 +48,4 @@ const HistoryCard = ({ item }) => {
   );
 };
 
-export default HistoryCard;
+export { HistoryCard };

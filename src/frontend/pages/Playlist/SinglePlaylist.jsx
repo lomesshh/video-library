@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { usePlaylist } from "../../context/playlistcontext";
-import PlaylistCard from "./PlaylistCard";
+import { usePlaylist } from "frontend/context";
+import { PlaylistCard } from "frontend/pages";
 
 const SinglePlaylist = () => {
   const { playliststate } = usePlaylist();
@@ -28,4 +28,4 @@ const SinglePlaylist = () => {
   );
 };
 
-export default SinglePlaylist;
+export { SinglePlaylist };

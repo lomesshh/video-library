@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
-import Iframe from "react-iframe-click";
 import { Link, useParams } from "react-router-dom";
+
+//library imports
+import Iframe from "react-iframe-click";
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
-import { useLike } from "../../context/likecontext";
-import { usePlaylist } from "../../context/playlistcontext";
-import { useHistory } from "../../context/historycontext";
-import { useWatchLater } from "../../context/watchlatercontext";
-import { useData } from "../../context/datacontext";
-import { Notify } from "../../components/Toast";
+
+import {
+  useHistory,
+  useLike,
+  usePlaylist,
+  useWatchLater,
+  useData,
+} from "frontend/context";
 
 const SingleVideo = () => {
   const { allVideos } = useData();
@@ -189,4 +193,4 @@ const SingleVideo = () => {
   );
 };
 
-export default SingleVideo;
+export { SingleVideo };

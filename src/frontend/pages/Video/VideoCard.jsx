@@ -1,13 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth, useLike, useWatchLater } from "frontend/context";
+
+// library imports
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { useLike } from "../../context/likecontext";
-import { useWatchLater } from "../../context/watchlatercontext";
-import { useAuth } from "../../context/authcontext";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -79,4 +78,4 @@ const VideoCard = ({ item }) => {
   );
 };
 
-export default VideoCard;
+export { VideoCard };

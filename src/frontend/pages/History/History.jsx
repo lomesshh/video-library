@@ -1,9 +1,9 @@
+import { Loader } from "frontend/components";
+import { useHistory } from "frontend/context";
 import React from "react";
-import { useHistory } from "../../context/historycontext";
-import Loader from "./../../components/Loader";
-import HistoryCard from "./HistoryCard";
+import { HistoryCard } from "frontend/pages";
 
-const LikedVideo = () => {
+const History = () => {
   const { historystate, clearAllHistory } = useHistory();
 
   return (
@@ -25,4 +25,4 @@ const LikedVideo = () => {
   );
 };
 
-export default LikedVideo;
+export { History };

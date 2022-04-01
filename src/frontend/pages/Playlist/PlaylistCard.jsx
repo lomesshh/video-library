@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { usePlaylist } from "frontend/context";
+
+//library imports
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { usePlaylist } from "../../context/playlistcontext";
 
 const PlaylistCard = ({ item, playlist }) => {
   const { addVideoToPlaylist } = usePlaylist();
@@ -46,4 +48,4 @@ const PlaylistCard = ({ item, playlist }) => {
   );
 };
 
-export default PlaylistCard;
+export { PlaylistCard };

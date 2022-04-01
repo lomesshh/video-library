@@ -1,6 +1,6 @@
+import { useAuth } from "frontend/context";
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/authcontext";
 
 const Nav = () => {
   const { token, handleLogout } = useAuth();
@@ -47,4 +47,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export { Nav };

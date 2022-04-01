@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useEffect } from "react";
-import { Notify } from "../components/Toast";
-import { useAuth } from "./authcontext";
+import { Notify } from "frontend/components";
+import { useAuth } from "frontend/context";
 
 const PlaylistContext = createContext();
 

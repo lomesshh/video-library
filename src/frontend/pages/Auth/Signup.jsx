@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/authcontext";
+import { useAuth } from "frontend/context";
 
 const initialValues = {
   name: "",
@@ -138,4 +138,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export { Signup };

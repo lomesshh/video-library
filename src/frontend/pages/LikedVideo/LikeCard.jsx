@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLike } from "frontend/context";
+
+//library imports
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import "tippy.js/themes/light.css";
 import "tippy.js/dist/tippy.css";
-import { useLike } from "../../context/likecontext";
 
 const LikeCard = ({ item }) => {
   const { addToLikes } = useLike();
@@ -46,4 +48,4 @@ const LikeCard = ({ item }) => {
   );
 };
 
-export default LikeCard;
+export { LikeCard };

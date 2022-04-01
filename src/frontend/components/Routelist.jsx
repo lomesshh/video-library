@@ -1,17 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "../pages/Auth/Login";
-import Profile from "../pages/Auth/Profile";
-import Signup from "../pages/Auth/Signup";
-import Homepage from "../pages/Home/Homepage";
-import VideoGrid from "../pages/Video/VideoGrid";
-import Playlist from "./../pages/Playlist/Playlist";
-import LikedVideo from "./../pages/LikedVideo/LikedVideo";
-import WatchLater from "./../pages/WatchLater/WatchLater";
-import History from "./../pages/History/History";
-import Explore from "./../pages/Video/Explore";
-import SingleVideo from "./../pages/Video/SingleVideo";
-import SinglePlaylist from "../pages/Playlist/SinglePlaylist";
+import {
+  Login,
+  Profile,
+  Signup,
+  History,
+  Homepage,
+  LikedVideo,
+  Playlist,
+  SinglePlaylist,
+  WatchLater,
+  VideoGrid,
+  Explore,
+  SingleVideo,
+} from "frontend/pages";
 
 const Routelist = () => {
   return (
@@ -39,4 +41,4 @@ const Routelist = () => {
   );
 };
 
-export default Routelist;
+export { Routelist };

@@ -1,7 +1,8 @@
+import { Loader } from "frontend/components";
 import React from "react";
-import { useWatchLater } from "../../context/watchlatercontext";
-import Loader from "./../../components/Loader";
-import WatchLaterCard from "./WatchLaterCard";
+import { WatchLaterCard } from "frontend/pages";
+import { useWatchLater } from "frontend/context";
+
 const WatchLater = () => {
   const { watchlaterstate, clearAllWatchLater } = useWatchLater();
 
@@ -24,4 +25,4 @@ const WatchLater = () => {
   );
 };
 
-export default WatchLater;
+export { WatchLater };
