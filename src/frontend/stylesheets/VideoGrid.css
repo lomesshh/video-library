@@ -176,6 +176,16 @@
   color: var(--background-color);
 }
 
+.upload__video .empty__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload__video .empty__list button {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1350px) {
   .video__list {
     grid-template-columns: 1fr 1fr;

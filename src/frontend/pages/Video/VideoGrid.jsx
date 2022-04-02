@@ -52,6 +52,14 @@ const VideoGrid = () => {
             <i className="fa-solid fa-clock"></i> <p>History</p>
           </p>
         </NavLink>
+        <NavLink
+          className={navLinkStyle}
+          to={`${token ? `uploadvideo` : `/login`}`}
+        >
+          <p className="sidebar__option">
+            <i class="fa-solid fa-upload"></i> <p>Upload Video</p>
+          </p>
+        </NavLink>
       </div>
 
       <Outlet />

@@ -13,6 +13,7 @@ import {
   VideoGrid,
   Explore,
   SingleVideo,
+  UploadVideo,
 } from "frontend/pages";
 
 const Routelist = () => {
@@ -35,6 +36,7 @@ const Routelist = () => {
           <Route path="liked" exact element={<LikedVideo />} />
           <Route path="watchlater" exact element={<WatchLater />} />
           <Route path="history" exact element={<History />} />
+          <Route path="uploadvideo" exact element={<UploadVideo />} />
         </Route>
       </Routes>
     </div>
