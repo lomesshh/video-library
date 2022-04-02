@@ -50,7 +50,7 @@ const Playlist = () => {
 
       <div className="video__list">
         {playliststate.playlist.map((item) => (
-          <div className="playlist__container">
+          <div className="playlist__container" key={item._id}>
             <Link to={`${item._id}`}>
               <h3>{item.title}</h3>
             </Link>

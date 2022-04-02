@@ -79,6 +79,10 @@
   margin-bottom: 0.5rem;
 }
 
+.singlevideo__info h5:nth-child(4) {
+  margin-bottom: 2rem;
+}
+
 .singlevideo__info-main {
   display: flex;
 }

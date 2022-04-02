@@ -35,6 +35,7 @@ const Explore = () => {
                   className={`${
                     localCategory === category.categoryName ? "active-cat" : ``
                   }`}
+                  key={category.categoryName}
                 >
                   RollsRoyce
                 </span>
@@ -46,6 +47,7 @@ const Explore = () => {
                   className={`${
                     localCategory === category.categoryName ? "active-cat" : ``
                   }`}
+                  key={category.categoryName}
                 >
                   {category.categoryName}
                 </span>

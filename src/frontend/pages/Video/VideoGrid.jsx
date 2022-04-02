@@ -57,7 +57,7 @@ const VideoGrid = () => {
           to={`${token ? `uploadvideo` : `/login`}`}
         >
           <p className="sidebar__option">
-            <i class="fa-solid fa-upload"></i> <p>Upload Video</p>
+            <i className="fa-solid fa-upload"></i> <p>Upload Video</p>
           </p>
         </NavLink>
       </div>

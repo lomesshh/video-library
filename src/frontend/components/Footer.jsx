@@ -13,7 +13,7 @@ const Footer = () => {
             <img
               src="https://hitwebcounter.com/counter/counter.php?page=7967752&style=0010&nbdigits=5&type=page&initCount=0"
               title="Free Counter"
-              Alt="web counter"
+              alt="web counter"
               border="0"
             />
           </h4>

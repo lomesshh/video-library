@@ -5,7 +5,6 @@ import { useData } from "frontend/context";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import UploadVideoCard from "./UploadVideoCard";
-import { Notify } from "frontend/components";
 
 const UploadVideo = () => {
   const { datastate, uploadObj, setUploadObj, uploadVideo } = useData();
@@ -27,11 +26,12 @@ const UploadVideo = () => {
           onClick={() => {
             setOpen(!open);
             setUploadObj({
+              ...uploadObj,
               title: "",
+              comments: [],
               category: "",
               description: "",
             });
-            setExtractedUrl("");
           }}
         >
           Upload Video
@@ -45,10 +45,13 @@ const UploadVideo = () => {
             onClick={() => {
               setOpen(!open);
               setUploadObj({
+                ...uploadObj,
                 title: "",
+                comments: [],
                 category: "",
                 description: "",
               });
+              setExtractedUrl("");
             }}
           >
             Upload Video
@@ -63,10 +66,11 @@ const UploadVideo = () => {
       >
         <p>Add Details</p>
         <form
-          onSubmit={() => {
+          onSubmit={(e) => {
+            e.preventDefault();
             setOpen(!open);
             const finalUrl = youtube_parser(extractedUrl);
-            uploadVideo(finalUrl);
+            uploadVideo(finalUrl, uploadObj);
           }}
         >
           <input
@@ -101,7 +105,7 @@ const UploadVideo = () => {
               Select category
             </option>
             {datastate.allCategories.map((category) => (
-              <option value={category.categoryName}>
+              <option key={category.categoryName} value={category.categoryName}>
                 {category.categoryName}
               </option>
             ))}
@@ -112,7 +116,10 @@ const UploadVideo = () => {
             placeholder="Enter description"
             value={uploadObj.description}
             onChange={(e) =>
-              setUploadObj((prev) => ({ ...prev, description: e.target.value }))
+              setUploadObj((prev) => ({
+                ...prev,
+                description: e.target.value,
+              }))
             }
             required
           />

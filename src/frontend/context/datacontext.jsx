@@ -100,7 +100,6 @@ const reducer = (state, action) => {
 const DataProvider = ({ children }) => {
   const [datastate, datadispatch] = useReducer(reducer, initialValue);
   const [uploadObj, setUploadObj] = useState({
-    url: "",
     title: "",
     category: "",
     comments: [],
@@ -109,16 +108,13 @@ const DataProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  console.log(datastate.uploadedVideo);
-  console.log(datastate.allVideos);
-
-  const uploadVideo = (finalUrl) => {
+  const uploadVideo = (finalUrl, obj) => {
     if (finalUrl === false) {
       Notify("Please provide proper youtube link", "warning");
     } else {
       datadispatch({
         type: "UPLOAD_VIDEO",
-        payload: { videoObj: uploadObj, videoUrl: finalUrl },
+        payload: { videoObj: obj, videoUrl: finalUrl },
       });
       navigate("/videos/explore");
       Notify("Video uploaded successfully", "info");

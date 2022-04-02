@@ -120,7 +120,7 @@ const SingleVideo = () => {
 
                     {visibleModal && (
                       <div className="playlist__view">
-                        {playliststate.playlist.map((item) => {
+                        {playliststate.playlist.map((item, index) => {
                           const findPlaylist = playliststate.playlist.find(
                             (play) => play._id === item._id
                           );
@@ -130,6 +130,7 @@ const SingleVideo = () => {
                           return (
                             <p
                               onClick={() => addVideoToPlaylist(findItem, item)}
+                              key={index + 1}
                             >
                               {findVideo ? (
                                 <i className="fa-solid fa-check"></i>
@@ -263,9 +264,9 @@ const SingleVideo = () => {
                   .map((item) => (
                     <Link to={`/videos/${item._id}`}>
                       <img
+                        key={item._id}
                         onClick={() => {
                           scrollToTop();
-                          setAllComment([]);
                         }}
                         src={`https://i.ytimg.com/vi/${item._id}/maxresdefault.jpg`}
                       />
