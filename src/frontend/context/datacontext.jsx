@@ -89,6 +89,19 @@ const reducer = (state, action) => {
           ...state.uploadedVideo.filter((video) => video._id !== removeVideoId),
         ],
       };
+    case "INC_VIDEO_COUNT":
+      const { incVideoId } = action.payload;
+      console.log("context", incVideoId);
+      return {
+        ...state,
+        allVideos: [
+          ...state.allVideos.map((video) =>
+            video._id === incVideoId
+              ? { ...video, videoCount: video.videoCount + 1 }
+              : { ...video }
+          ),
+        ],
+      };
     case "API_REQUEST":
       return { ...state, loading: true };
     case "ERROR_HANDLE":
@@ -107,6 +120,7 @@ const DataProvider = ({ children }) => {
     description: "",
   });
 
+  // dark mode
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useLocalStorage(
     "theme",
@@ -120,6 +134,7 @@ const DataProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
+  // upload video
   const uploadVideo = (finalUrl, obj) => {
     if (finalUrl === false) {
       Notify("Please provide proper youtube link", "warning");

@@ -74,7 +74,13 @@ const SingleVideo = () => {
               <Iframe
                 frameBorder="0"
                 src={`https://www.youtube.com/embed/${findItem._id}`}
-                onInferredClick={() => addToHistory(findItem)}
+                onInferredClick={() => {
+                  datadispatch({
+                    type: "INC_VIDEO_COUNT",
+                    payload: { incVideoId: videoId },
+                  });
+                  addToHistory(findItem);
+                }}
               ></Iframe>
             </div>
 
@@ -83,6 +89,7 @@ const SingleVideo = () => {
                 {/* Video Info display */}
 
                 <div className="singlevideo__info">
+                  <h5>Video views : {findItem.videoCount}</h5>
                   <h3>{findItem.title}</h3>
                   <h5>Category : {findItem.category}</h5>
                   <h5>Description : </h5>
@@ -256,7 +263,7 @@ const SingleVideo = () => {
 
               {/* Suggested video section */}
 
-              <div className="related__video-main">
+              {/*    <div className="related__video-main">
                 <h2>Suggested Videos</h2>
                 {datastate.allVideos
                   .filter((product) => product.title !== findItem.title)
@@ -272,7 +279,7 @@ const SingleVideo = () => {
                       />
                     </Link>
                   ))}
-              </div>
+                      </div>  */}
             </div>
           </div>
         </div>
