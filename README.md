@@ -52,7 +52,7 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
 
 
 ## Live
-[Shoemall](https://shoemall.netlify.app/) 🚀
+[Gripping Gears](https://grippinggears.netlify.app/) 🚀
 
 
 ## Glimpses of Gripping Gears 🙈 :
