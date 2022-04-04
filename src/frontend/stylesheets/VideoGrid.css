@@ -60,7 +60,7 @@
   border: none;
   color: var(--primary-color);
   background-color: var(--background-color);
-  border-bottom: var(--background-color) solid 3px;
+  border-bottom: transparent solid 3px;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -91,7 +91,7 @@
 .video__card {
   height: 250px;
   width: 300px;
-  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 0.25em,
+  box-shadow: var(--box-shadow) 0px 0px 0.25em,
     rgba(255, 255, 255, 0.05) 0px 0.25em 1em;
 }
 

@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useData } from "frontend/context";
 
 const Homepage = () => {
+  const { theme } = useData();
+
   return (
     <div>
       <div className="hero-section">
@@ -20,7 +23,11 @@ const Homepage = () => {
         </div>
         <div className="hero-image">
           <img
-            src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/hero2_lldbgl.jpg"
+            src={`${
+              theme === "light"
+                ? `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1649065733/gripping%20gears/light4_wu4c9b.png`
+                : `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/hero2_lldbgl.jpg`
+            }`}
             alt="hero-image"
           />
         </div>
@@ -29,7 +36,11 @@ const Homepage = () => {
       <div className="hero-section second__section">
         <div className="hero-image">
           <img
-            src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648030113/gripping%20gears/hero_ddidwk.jpg"
+            src={`${
+              theme === "light"
+                ? `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1649065733/gripping%20gears/light2_qn2l8i.png`
+                : `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648030113/gripping%20gears/hero_ddidwk.jpg`
+            }`}
             alt="hero-image"
           />
         </div>
@@ -55,7 +66,11 @@ const Homepage = () => {
         </div>
         <div className="hero-image">
           <img
-            src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/hero3_m01qvm.webp"
+            src={`${
+              theme === "light"
+                ? `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1649065733/gripping%20gears/light1_qfqmuo.png`
+                : `https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648029766/gripping%20gears/hero3_m01qvm.webp`
+            }`}
             alt="hero-image"
           />
         </div>

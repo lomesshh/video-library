@@ -8,6 +8,7 @@ import React, {
   useState,
 } from "react";
 import { Notify } from "frontend/components";
+import useLocalStorage from "use-local-storage";
 
 const DataContext = createContext();
 
@@ -106,6 +107,17 @@ const DataProvider = ({ children }) => {
     description: "",
   });
 
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "light" : "dark"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
   const navigate = useNavigate();
 
   const uploadVideo = (finalUrl, obj) => {
@@ -157,6 +169,8 @@ const DataProvider = ({ children }) => {
           uploadObj,
           setUploadObj,
           uploadVideo,
+          theme,
+          switchTheme,
         }}
       >
         {children}

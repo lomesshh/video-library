@@ -24,11 +24,7 @@
   border-bottom: var(--secondary-color) solid 3px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.profile__image button:hover {
-  background-color: var(--secondary-color);
-  color: var(--background-color);
+  color: var(--text-color);
 }
 
 .tabs__border {
