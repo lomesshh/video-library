@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   useHistory,
   useLike,
@@ -39,12 +39,6 @@ const SingleVideo = () => {
   const findItemInWatchlater = watchlaterstate.watchLater.find(
     (prod) => prod._id === videoId
   );
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-    });
-  };
 
   const postComment = () => {
     setViewComment(true);

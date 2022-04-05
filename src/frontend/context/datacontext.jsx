@@ -118,6 +118,7 @@ const DataProvider = ({ children }) => {
     category: "",
     comments: [],
     description: "",
+    videoCount: 0,
   });
 
   // dark mode
