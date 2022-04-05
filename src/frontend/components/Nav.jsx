@@ -20,9 +20,9 @@ const Nav = () => {
         <ul>
           <li>
             {theme === "light" ? (
-              <i class="fa-solid fa-moon" onClick={switchTheme}></i>
+              <i className="fa-solid fa-moon" onClick={switchTheme}></i>
             ) : (
-              <i class="fa-solid fa-sun" onClick={switchTheme}></i>
+              <i className="fa-solid fa-sun" onClick={switchTheme}></i>
             )}
           </li>
           {!token && (
