@@ -32,6 +32,7 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
    - Likes Management
    - Watch Later Management
    - Playlist Management
+   - Upload video page
    - History management ( will save video only if you play )
    - Login / Logout
    - Signup
@@ -47,8 +48,10 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
 - Watchlater management add/remove videos | Clear All
 - History management add/remove videos | Clear All
 - Playlist management add/remove playlist | add/remove videos from playlist
-- Single video page with suggested videos
+- Upload video | remove uploaded video
+- Single video page with comment section & video views count
 - My profile
+- Dark mode available
 
 
 ## Live
