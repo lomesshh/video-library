@@ -13,6 +13,7 @@ import {
   VideoGrid,
   Explore,
   SingleVideo,
+  UploadVideo,
 } from "frontend/pages";
 import { Pathnotfound } from "frontend/components";
 
@@ -34,9 +35,10 @@ const Routelist = () => {
             exact
             element={<SinglePlaylist />}
           />
-          <Route path="liked" element={<LikedVideo />} />
-          <Route path="watchlater" element={<WatchLater />} />
-          <Route path="history" element={<History />} />
+          <Route path="liked" exact element={<LikedVideo />} />
+          <Route path="watchlater" exact element={<WatchLater />} />
+          <Route path="history" exact element={<History />} />
+          <Route path="uploadvideo" exact element={<UploadVideo />} />
         </Route>
       </Routes>
     </div>

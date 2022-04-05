@@ -42,7 +42,10 @@ const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
-      Notify("Unable to login, please try again later", "error");
+      Notify(
+        "Invalid credentials or Unable to login, please try again later",
+        "error"
+      );
     }
   };
 

@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import { VideoCard } from "frontend/pages";
 
 const Explore = () => {
-  const { allVideos, loading, allCategories } = useData();
+  const { datastate } = useData();
   const [searchFilter, setSearchFilter] = useState("");
   const [localCategory, setlocalCategory] = useState("All");
 
   return (
     <div className="video__grid">
-      {loading && <Loader />}
+      {datastate.loading && <Loader />}
       <div className="video__search">
         <input
           type="text"
@@ -19,7 +19,7 @@ const Explore = () => {
           onChange={(e) => setSearchFilter(e.target.value)}
         />
       </div>
-      {!loading && (
+      {!datastate.loading && (
         <div className="category__div">
           <span
             className={`${localCategory === "All" ? "active-cat" : ``}`}
@@ -27,7 +27,7 @@ const Explore = () => {
           >
             All
           </span>
-          {allCategories.map((category) => {
+          {datastate.allCategories.map((category) => {
             if (category.categoryName === "Rolls Royce") {
               return (
                 <span
@@ -35,6 +35,7 @@ const Explore = () => {
                   className={`${
                     localCategory === category.categoryName ? "active-cat" : ``
                   }`}
+                  key={category.categoryName}
                 >
                   RollsRoyce
                 </span>
@@ -46,6 +47,7 @@ const Explore = () => {
                   className={`${
                     localCategory === category.categoryName ? "active-cat" : ``
                   }`}
+                  key={category.categoryName}
                 >
                   {category.categoryName}
                 </span>
@@ -55,7 +57,7 @@ const Explore = () => {
       )}
 
       <div className="video__list">
-        {allVideos
+        {datastate.allVideos
           .filter((product) => {
             if (localCategory === "All") {
               return product;

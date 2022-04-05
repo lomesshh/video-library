@@ -71,12 +71,20 @@
   margin-bottom: 1rem;
 }
 
+.singlevideo__info h5:nth-child(1){
+  margin-bottom: 0.7rem;
+}
+
 .singlevideo__info h5:nth-child(2) {
   margin-bottom: 1rem;
 }
 
 .singlevideo__info h5:nth-child(3) {
   margin-bottom: 0.5rem;
+}
+
+.singlevideo__info h5:nth-child(4) {
+  margin-bottom: 2rem;
 }
 
 .singlevideo__info-main {
@@ -106,6 +114,102 @@
 
 .related__video-main img:hover {
   opacity: 0.7;
+}
+
+/* comment */
+
+.commentSection {
+  width: 80%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.mainComment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border: 1px solid var(--secondary-color);
+  margin: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--background-color);
+}
+
+.mainComment p {
+  color: var(--primary-color);
+}
+
+.comment__title {
+  margin-bottom: 1rem;
+}
+
+.inputComment h3 i {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.inputComment input {
+  width: 60%;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  color: var(--primary-color);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.mainComment h4 {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 2rem;
+  align-items: center;
+}
+
+.childComment {
+  /* border: 1px solid red; */
+  margin: 0;
+  margin: 0.3rem 0;
+  width: 90%;
+  padding: 0.3rem 1rem;
+  align-self: flex-end;
+}
+
+.inputComment h3 {
+  margin: 0.7rem 0rem 0.7rem 0rem;
+}
+
+.mainComment .reply__secrion {
+  margin-left: 8%;
+}
+
+.mainComment span {
+  margin: 0rem 0rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__input {
+  display: flex;
+  gap: 1rem;
+  width: 300px;
+}
+
+.modal__button {
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 @media screen and (max-width: 1250px) {
@@ -156,16 +260,25 @@
   .related__video-main a > img {
     width: 80%;
   }
+  .modal__input {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .related__video-main a > img {
     width: 70%;
   }
+  .modal__input {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 310px) {
   .related__video-main a > img {
     width: 65%;
+  }
+  .modal__input {
+    width: 180px;
   }
 }

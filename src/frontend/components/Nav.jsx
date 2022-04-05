@@ -1,10 +1,10 @@
-import { useAuth } from "frontend/context";
+import { useAuth, useData } from "frontend/context";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
   const { token, handleLogout } = useAuth();
-
+  const { theme, switchTheme } = useData();
   return (
     <nav className="nav-bar">
       <div>
@@ -18,6 +18,13 @@ const Nav = () => {
       </div>
       <div className="nav-option">
         <ul>
+          <li>
+            {theme === "light" ? (
+              <i class="fa-solid fa-moon" onClick={switchTheme}></i>
+            ) : (
+              <i class="fa-solid fa-sun" onClick={switchTheme}></i>
+            )}
+          </li>
           {!token && (
             <li>
               <Link to="/login">
@@ -34,6 +41,7 @@ const Nav = () => {
               </p>
             </li>
           )}
+
           <li>
             <Link to={`${token ? `/profile` : `/login`}`}>
               <p>

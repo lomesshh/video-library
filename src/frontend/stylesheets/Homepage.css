@@ -2,13 +2,26 @@
 .nav-bar {
   box-shadow: 0 4px 6px -5px rgb(148, 148, 148);
   padding: 0.7rem;
-  background-color: var(--background-color);
+  background-color: var(--nav-color);
   margin-bottom: 0.2rem;
 }
 
 .nav-logo {
   height: 45px;
   width: 250px;
+}
+
+.fa-moon, .fa-sun{
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+
+.fa-moon:hover, .fa-sun:hover, li:hover{
+  background-color: var(--nav-color) !important;
+}
+
+.nav-option p, .nav-option p i, .nav-option i {
+  color: #fff;
 }
 
 a {
