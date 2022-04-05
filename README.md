@@ -71,7 +71,7 @@ We're a team of fun enthusiastic people from all over the world. we create aweso
   </tr>
   <tr>
     <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706206/gripping%20gears/Screenshot_41_zc6jos.png" alt="mockup" /></td>
-    <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1648706209/gripping%20gears/Screenshot_42_ieypj2.png" alt="mockups" /></td>
+    <td><img src="https://res.cloudinary.com/dgwzpbj4k/image/upload/v1649162949/gripping%20gears/Screenshot_36_bztpiz.png" alt="mockups" /></td>
   </tr>
 </table>
 <h2>📬 Contact</h2>
