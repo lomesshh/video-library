@@ -6,6 +6,7 @@ const Notify = (msg, type) =>
   toast(msg, {
     position: "bottom-center",
     autoClose: 1200,
+    theme: "dark",
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: false,
